@@ -9,7 +9,6 @@ jobs:
   detect-file-changes:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
     - uses: dorny/paths-filter@v2
       id: changes
       with:
