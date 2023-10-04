@@ -13,7 +13,7 @@ jobs:
     - uses: dorny/paths-filter@v2
       id: changes
       with:
-        base: devel
+        base: ${{ github.event_name == 'workflow_dispatch' && 'devel' || '' }}
         filters: |
           test:
             - "test/**"
